@@ -50,7 +50,7 @@ function checkLetter(letter, button){
     //Does not include letter
     if (attempts === 1){
       attempts = 0
-      attemptsDisplay.textContent = `Attempts: ${attempts}`
+      attemptsDisplay.textContent = `Attempts:${attempts}`
       resultDisplay.textContent = `The Word Was: ${randomWord}`
       resultDisplay.style.opacity = "100%"
     }
@@ -64,7 +64,7 @@ function checkLetter(letter, button){
 
 function reset(){
   attempts = 6;
-  attemptsDisplay.textContent = `Attempts: ${attempts}`;
+  attemptsDisplay.textContent = `Attempts:${attempts}`;
   randomWord = words[Math.floor(Math.random() * 50)];
   displayHolder = [];
   
