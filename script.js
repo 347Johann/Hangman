@@ -51,6 +51,7 @@ function checkLetter(letter, button){
     if (attempts === 1){
       attempts = 0
       resultDisplay.textContent = `The Word Was: ${randomWord}`
+      resultDisplay.style.color = "white";
       resultDisplay.style.opacity = "100%"
     }
     else if(attempts !== 0){
@@ -59,4 +60,14 @@ function checkLetter(letter, button){
       button.style.backgroundColor = "red";
     }
   }
+}
+
+function reset(){
+  attempts = 0;
+  randomWord = words[Math.floor(Math.random() * 50)]
+  displayHolder = []
+  for (let i = 0; i < randomWord.length; i++){
+    displayHolder[i] = "_"
+  }
+  display.textContent = displayHolder.join("");
 }
