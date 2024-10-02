@@ -36,6 +36,7 @@
     width: 210px;
     background-color: red;
     border: 3px solid darkred;
+    border-radius: 5px;
     color: white;
     font-size: 30px;
     height: 50px;
