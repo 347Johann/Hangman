@@ -56,7 +56,7 @@ function checkLetter(letter, button){
     }
     else if(attempts !== 0){
       attempts--
-      attemptsDisplay.textContent = `Attempts: ${attempts}`
+      attemptsDisplay.textContent = `Attempts:${attempts}`
       button.style.backgroundColor = "red";
     }
   }
