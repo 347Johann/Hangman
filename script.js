@@ -56,18 +56,29 @@ function checkLetter(letter, button){
     }
     else if(attempts !== 0){
       attempts--
-      attemptsDisplay.textContent = `Attempts: ${attempts}`
+      attemptsDisplay.textContent = `Attempts:${attempts}`
       button.style.backgroundColor = "red";
     }
   }
 }
 
 function reset(){
-  attempts = 0;
-  randomWord = words[Math.floor(Math.random() * 50)]
-  displayHolder = []
+  attempts = 6;
+  attemptsDisplay.textContent = `Attempts: ${attempts}`;
+  randomWord = words[Math.floor(Math.random() * 50)];
+  displayHolder = [];
+  
   for (let i = 0; i < randomWord.length; i++){
-    displayHolder[i] = "_"
+    displayHolder[i] = "_";
   }
+  
   display.textContent = displayHolder.join("");
+
+  keys.forEach(function(key) {
+    key.style.backgroundColor = "rgb(231, 231, 231)";
+  });
+  
+  resultDisplay.textContent = "";
+  resultDisplay.style.opacity = "0";
 }
+
