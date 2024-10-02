@@ -42,7 +42,7 @@ function checkLetter(letter, button){
     
     if (displayHolder.join("") === randomWord){
       resultDisplay.textContent = `The Word Was: ${randomWord} HOORAY!!`
-      resultDisplay.style.color = "lightgreen";
+      resultDisplay.style.color = "green";
       resultDisplay.style.opacity = "100%"
     }
   }
@@ -50,13 +50,13 @@ function checkLetter(letter, button){
     //Does not include letter
     if (attempts === 1){
       attempts = 0
+      attemptsDisplay.textContent = `Attempts: ${attempts}`
       resultDisplay.textContent = `The Word Was: ${randomWord}`
-      resultDisplay.style.color = "white";
       resultDisplay.style.opacity = "100%"
     }
     else if(attempts !== 0){
       attempts--
-      attemptsDisplay.textContent = `Attempts:${attempts}`
+      attemptsDisplay.textContent = `Attempts: ${attempts}`
       button.style.backgroundColor = "red";
     }
   }
