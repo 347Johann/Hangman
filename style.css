@@ -17,20 +17,32 @@
     border: none;
     background-color: rgb(231, 231, 231);
 }
-.letters:hover{
-    background-color: rgb(185, 185, 185);
+
+.letters:hover {
+    background-color: darkgray;
 }
+
+.letters.correct {
+    background-color: rgb(0, 226, 0);
+}
+
+.letters.incorrect {
+    background-color: red;
+}
+
 #Attempts{
     font-family: 'Courier New', Courier, monospace;
     position: absolute;
     top: 30px;
 }
-#result{
+
+#result {
     opacity: 0%;
     text-align: center;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-#reset{
+
+#reset {
     position: relative;
     bottom: 30px;
     width: 210px;
@@ -41,6 +53,8 @@
     font-size: 30px;
     height: 50px;
 }
+
+/*Adapting Resolution*/
 @media (max-width: 800px){
     #Attempts{
         left: 50%;
