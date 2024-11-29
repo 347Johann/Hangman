@@ -33,15 +33,14 @@ window.addEventListener("load", function() {
 });
 
 function checkLetter(letter, button) {
-  if (randomWord.toLowerCase().includes(letter) && attempts !== 0) {
-    // Includes letter
+  if (randomWord.toLowerCase().includes(letter) && attempts !== 0) {// Checks if player input includes letters of random word else attempts--
     for (let i = 0; i < randomWord.length; i++) {
       if (randomWord[i].toLowerCase() === letter) {
         displayHolder[i] = letter;
       }
     }
     display.textContent = displayHolder.join("");
-    button.classList.add("correct"); // Add 'correct' class
+    button.classList.add("correct"); // Adds 'correct' class if player input includes letters of random word
 
     if (displayHolder.join("") === randomWord) {
       //Win scenerio
@@ -50,7 +49,7 @@ function checkLetter(letter, button) {
       resultDisplay.style.opacity = "100%";
     }
   } else {
-    // Does not include letter
+    // Does not include letter of random word
     if (attempts === 1) {
       //Lose scenerio
       attempts = 0;
@@ -60,7 +59,7 @@ function checkLetter(letter, button) {
     } else if (attempts !== 0) {
       attempts--;
       attemptsDisplay.textContent = `Attempts:${attempts}`;
-      button.classList.add("incorrect"); // Add 'incorrect' class
+      button.classList.add("incorrect"); // Adds 'incorrect' class if player input does not include letters of random word
     }
   }
 }
@@ -78,7 +77,7 @@ function reset() {
   display.textContent = displayHolder.join("");
 
   keys.forEach(function(key) {
-    key.classList.remove("correct", "incorrect"); // Reset button states
+    key.classList.remove("correct", "incorrect"); // Resets button states
   });
 
   resultDisplay.textContent = "";
